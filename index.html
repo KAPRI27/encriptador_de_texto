@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/imagenes/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <!--ENCABEZADO DEL OUTPUT-->
+    <header class="header">
+      <img
+        class="header__logo"
+        src="./assets/imagenes/logoA.png"
+        alt="Logo letra k"
+      />
+    </header>
+    <section class="container">
+      <!--SECCION DE OUTPUT DEL MENSAJE-->
+      <main class="container__salida">
+        <div class="container__salida__texto">
+          <p class="container__salida__mensajeResuelto">
+            Aquí se mostrará el mensaje YA procesado
+          </p>
+        </div>
+
+        <section class="container__botones">
+          <!--BOTONES DE ENCRIPTAR Y DESENCRIPTAR-->
+          <button class="container__botones__encriptar" type="submit">
+            ENCRIPTAR
+          </button>
+
+          <button class="container__botones__desencriptar" type="submit">
+            DESENCRIPTAR
+          </button>
+        </section>
+      </main>
+      <!--lado izquierdo- container inputText-->
+      <section class="container__inputText">
+        <img
+          class="imagen_input"
+          src="./assets/imagenes/Muñeco.png"
+          alt="imagen de un hombre joven, que utiliza una lupa para revisar un diamante"
+        />
+        <div class="container__inputText__input">
+          <label for="mensaje"
+            >Ingresa únicamente minúsculas:
+            <input class="container__inputText__mensaje" type="text" />
+          </label>
+        </div>
+        <button class="container__inputText__copiar">COPIAR</button>
+      </section>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+      Desarrollado por <img src="./assets/imagenes/favicon-16x16.png" /> Paula
+      Maureira - Chile 2024
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
