@@ -51,7 +51,8 @@ body {
   padding: 1%;
 }
 .header__logo {
-  padding: 1%;
+  width: 60px;
+  height: auto;
 }
 
 /*este contiene el encriptador*/
@@ -63,20 +64,30 @@ body {
 }
 
 /*salida del mensaje*/
-.container__salida {
-  background-color: var(--color-lightblue-400);
+.container__entrada {
+  background-color: var(--color-lightblue-100);
   width: 100%;
-  height: auto;
-  padding: 1rem;
 }
 
-.container__salida__texto {
-  background-color: var(--color-gray-100);
+.container__entrada__texto {
+  padding: 15px;
+}
+#textarea {
   width: 100%;
-  height: auto;
+  color: var(--color-darkblue-400);
+  background-color: var(--color-lightblue-100);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-align: left;
 }
 
-.container__salida__mensajeResuelto {
+textarea {
+  border: none;
+  text-decoration: none;
+  resize: none;
+}
+
+.container__entrada__mensajeResuelto {
   padding: 1rem;
   color: var(--color-darkblue-400);
 }
@@ -85,7 +96,6 @@ body {
   text-align: center;
   width: 100%;
   height: auto;
-  margin-top: 65%;
   background-color: var(--color-gray-100);
 }
 .container__botones__encriptar {
@@ -115,7 +125,7 @@ body {
 
 /*
 /*seccion donde se ingresa el mensaje*/
-.container__inputText {
+.container__salida {
   display: inline-block;
   text-align: center;
   padding: 1rem;
@@ -125,17 +135,25 @@ body {
   height: auto;
 }
 
-.imagen_input {
-  margin-top: 1rem;
+h6,
+svg {
+  display: flex;
+  justify-content: center;
 }
 
-.container__inputText__input {
+.container__salida__imagen {
+  margin-top: 1rem;
+  width: 336px;
+  height: 304px;
+}
+
+.container__salida__mensaje {
 }
 
 label {
   font-family: "Roboto", sans-serif;
 }
-.container__inputText__mensaje {
+.container__salida__mensajeResuelto {
   margin: 20px 5px 20px 5px;
   width: 80%;
   font-family: "Roboto", sans-serif;
