@@ -36,10 +36,10 @@
         <div class="container__entrada__texto">
           <label for="mensaje">
             <textarea
-              class="container__inputText__mensaje"
-              name="container__inputText__mensaje"
-              id="textarea"
-              type="text"
+              id="textoInicial"
+              class="container__entrada__mensaje"
+              name="mensaje"
+              type="button"
               columns="10"
               rows="30"
               placeholder="INGRESA EL TEXTO AQUÍ"
@@ -49,30 +49,28 @@
 
         <section class="container__botones">
           <h6>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="20px"
-              viewBox="0 -960 960 960"
-              width="20px"
-              fill="#072b61"
-            >
-              <path
-                d="m48-144 432-720 432 720H48Zm127-72h610L480-724 175-216Zm304.79-48q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5ZM444-384h72v-192h-72v192Zm36-86Z"
-              />
-            </svg>
+            <img src="./assets/imagenes/icono.svg" alt="" srcset="" />
             INGRESA ÚNICAMENTE MINÚSCULAS Y EVITA LOS CARACTERES ESPECIALES
           </h6>
           <!--BOTONES DE ENCRIPTAR Y DESENCRIPTAR-->
-          <button class="container__botones__encriptar" type="submit">
+          <button
+            class="container__botones__encriptar"
+            onclick="encriptar()"
+            type="submit"
+          >
             ENCRIPTAR
           </button>
 
-          <button class="container__botones__desencriptar" type="submit">
+          <button
+            class="container__botones__desencriptar"
+            onclick="desencriptar()"
+            type="submit"
+          >
             DESENCRIPTAR
           </button>
         </section>
       </main>
-      <!--lado izquierdo- container inputText-->
+      <!--lado izquierdo- container SALIDA DEL TEXTO-->
       <section class="container__salida">
         <img
           class="container__salida__imagen"
@@ -80,14 +78,20 @@
           alt="imagen de un hombre joven, que utiliza una lupa para revisar un diamante"
         />
         <div class="container__salida__mensaje">
-          <p class="container__salida__mensajeResuelto">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            hic natus fuga excepturi commodi! Quaerat explicabo possimus
-            voluptatem, iste debitis, nemo, libero quibusdam dignissimos ratione
-            sed quod vel facere perferendis.
-          </p>
+          <p id="textoResuelto">SE MOSTRARÄ EL TEXTO DESCIFRADO AQUÍ</p>
+          <textarea
+            id="textoSalida"
+            class="container__salida__mensajeResuelto"
+            name="container__salida__mensajeResuelto"
+            type="text"
+            columns="10"
+            rows="30"
+            placeholder="El texto de salida se mostrará aquí..."
+          ></textarea>
         </div>
-        <button class="container__inputText__copiar">COPIAR</button>
+        <div class="container__botones">
+          <button class="container__salida__boton__copiar">COPIAR</button>
+        </div>
       </section>
     </section>
     <!-- FOOTER -->

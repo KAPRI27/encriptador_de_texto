@@ -17,10 +17,6 @@
   --color-gray-400: #495057;
   --color-gray-500: #343a40;
 
-  --color-primario: #df826c;
-  --color-secundario: #7776b3;
-  --color-terciario: #379777;
-
   /*colores K*/
   --color-morado: #954a9c;
   --color-purpura: #652777;
@@ -63,6 +59,10 @@ body {
   padding: 30px;
 }
 
+label {
+  font-family: "Roboto", sans-serif;
+}
+
 /*salida del mensaje*/
 .container__entrada {
   background-color: var(--color-lightblue-100);
@@ -72,25 +72,27 @@ body {
 .container__entrada__texto {
   padding: 15px;
 }
-#textarea {
-  width: 100%;
+
+textarea::placeholder {
+  color: var(--color-darkblue-200);
+  text-shadow: 1px 2px 1px var(--color-gray-200);
+  padding: 10px;
+}
+
+.container__entrada__mensaje {
+  width: 97%;
   color: var(--color-darkblue-400);
   background-color: var(--color-lightblue-100);
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   text-align: left;
-}
-
-textarea {
   border: none;
   text-decoration: none;
   resize: none;
+  padding: 10px;
 }
 
-.container__entrada__mensajeResuelto {
-  padding: 1rem;
-  color: var(--color-darkblue-400);
-}
+/*BOTONES */
 .container__botones {
   display: block;
   text-align: center;
@@ -98,6 +100,8 @@ textarea {
   height: auto;
   background-color: var(--color-gray-100);
 }
+
+/*BOTON ENCRIPTAR MENSAJE*/
 .container__botones__encriptar {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
@@ -110,6 +114,13 @@ textarea {
   border: none;
   border-radius: 1rem;
 }
+
+.container__botones__encriptar:hover {
+  background-color: var(--color-darkblue-200);
+  color: var(--color-darkblue-400);
+}
+
+/*BOTON DESENCRIPTAR MENSAJE*/
 .container__botones__desencriptar {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
@@ -123,7 +134,11 @@ textarea {
   border-radius: 1rem;
 }
 
-/*
+.container__botones__desencriptar:hover {
+  background-color: var(--color-darkblue-200);
+  color: var(--color-lightblue-200);
+}
+
 /*seccion donde se ingresa el mensaje*/
 .container__salida {
   display: inline-block;
@@ -141,41 +156,48 @@ svg {
   justify-content: center;
 }
 
+/*CONTAINER SALIDA DEL MENSAJE */
 .container__salida__imagen {
-  margin-top: 1rem;
   width: 336px;
   height: 304px;
+  background-color: rgb(243, 195, 195);
 }
 
 .container__salida__mensaje {
-}
-
-label {
-  font-family: "Roboto", sans-serif;
-}
-.container__salida__mensajeResuelto {
-  margin: 20px 5px 20px 5px;
-  width: 80%;
+  color: var(--color-darkblue-400);
+  background-color: var(--color-lightblue-500);
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  border-radius: 5px;
-  height: 1.5rem;
-  border: 1px solid;
-  border-color: var(--color-darkblue-400);
-
-  color: var(--color-darkblue-400);
+  text-align: left;
+  padding: 10px;
 }
 
-.container__inputText__copiar {
+#textoSalida {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  height: 250px;
+  color: var(--color-gray-500);
+  background-color: rgb(226, 109, 109);
+}
+
+/*BOTÓN PARA COPIAR MENSAJE*/
+.container__salida__boton__copiar {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   color: var(--color-lightblue-200);
   font-weight: bold;
+  margin-top: 5.4rem;
   padding: 1rem;
-  background-color: var(--color-darkblue-400);
-  width: 10rem;
+  width: 12rem;
   border: none;
   border-radius: 1rem;
+  background-color: var(--color-darkblue-400);
+}
+
+.container__salida__boton__copiar:hover {
+  background-color: var(--color-darkblue-200);
+  color: var(--color-darkblue-400);
 }
 
 /*footer de la página*/
@@ -183,4 +205,6 @@ footer {
   background-color: var(--color-lightblue-200);
   text-align: center;
   padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
 }
