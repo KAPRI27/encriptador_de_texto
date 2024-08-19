@@ -24,11 +24,7 @@
   <body>
     <!--ENCABEZADO DEL OUTPUT-->
     <header class="header">
-      <img
-        class="header__logo"
-        src="./assets/imagenes/favicon.ico"
-        alt="Logo letra k"
-      />
+      <h1>ENCRIPTADOR / DESENCRIPTADOR DE TEXTO</h1>
     </header>
     <section class="container">
       <!--SECCION DE OUTPUT DEL MENSAJE-->
@@ -38,11 +34,10 @@
             <textarea
               id="textoInicial"
               class="container__entrada__mensaje"
-              name="mensaje"
-              type="button"
+              type="text"
               columns="10"
-              rows="30"
-              placeholder="INGRESA EL TEXTO AQUÍ"
+              rows="20"
+              placeholder="INGRESA EL TEXTO AQUÍ, EN MINÚSCULAS Y SIN TILDES"
             ></textarea>
           </label>
         </div>
@@ -50,10 +45,11 @@
         <section class="container__botones">
           <h6>
             <img src="./assets/imagenes/icono.svg" alt="" srcset="" />
-            INGRESA ÚNICAMENTE MINÚSCULAS Y EVITA LOS CARACTERES ESPECIALES
+            INGRESA ÚNICAMENTE MINÚSCULAS Y NO UTILICES TILDES
           </h6>
-          <!--BOTONES DE ENCRIPTAR Y DESENCRIPTAR-->
+          <!--BOTÓN PARA ENCRIPTAR-->
           <button
+            id="encriptando"
             class="container__botones__encriptar"
             onclick="encriptar()"
             type="submit"
@@ -61,7 +57,9 @@
             ENCRIPTAR
           </button>
 
+          <!--BOTÓN PARA DESENCRIPTAR-->
           <button
+            id="desencriptando"
             class="container__botones__desencriptar"
             onclick="desencriptar()"
             type="submit"
@@ -78,14 +76,11 @@
           alt="imagen de un hombre joven, que utiliza una lupa para revisar un diamante"
         />
         <div class="container__salida__mensaje">
-          <p id="textoResuelto">SE MOSTRARÄ EL TEXTO DESCIFRADO AQUÍ</p>
           <textarea
-            id="textoSalida"
-            class="container__salida__mensajeResuelto"
-            name="container__salida__mensajeResuelto"
+            id="resultDiv"
             type="text"
             columns="10"
-            rows="30"
+            rows="10"
             placeholder="El texto de salida se mostrará aquí..."
           ></textarea>
         </div>
